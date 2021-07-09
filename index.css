@@ -12,8 +12,8 @@ html, body {
 
 /* Game play----------------------------------------------------------------------------------------> */
 #game_board {
-    height: 900px;
-    width: 900px;
+    height: 90vh;
+    width: 90vh;
     padding: 0;
     margin: 0;
     overflow: hidden;
@@ -25,10 +25,10 @@ html, body {
 #snake {
     position: relative;
     background-color: yellow;
-    width: 50px;
-    height: 50px;
-    left: 0px;
-    top: 0px;
+    width: 5vh;
+    height: 5vh;
+    left: 0vh;
+    top: 0vh;
 }
 
 
@@ -40,8 +40,8 @@ html, body {
 #apple {
     position: relative;
     background-color: red;
-    width: 50px;
-    height: 50px;
+    width: 5vh;
+    height: 5vh;
     border-radius: 50%;
     border: black 1px solid;
     animation: appleBump 0.4s linear infinite;
@@ -50,8 +50,8 @@ html, body {
 #gr_apple {
     position: relative;
     background-color: rgb(0, 255, 0);
-    width: 50px;
-    height: 50px;
+    width: 5vh;
+    height: 5vh;
     border-radius: 50%;
     border: black 1px solid;
     animation: appleBump 0.4s linear infinite;
@@ -61,10 +61,10 @@ html, body {
 
 #score_board {
     position: absolute;
-    height: 100px;
-    width: 200px;
-    top: 100px;
-    left: 100px;
+    height: 10vh;
+    width: 20vh;
+    top: 10vh;
+    left: 10vh;
     margin: 0;
     padding: 0;
     border: black 1px solid;
@@ -81,7 +81,7 @@ html, body {
     text-align: center;
     justify-content: center;
     align-items: center;
-    font-size: 60px;
+    font-size: 6vh;
     font-family: 'Caesar Dressing';
 }
 
@@ -93,7 +93,7 @@ html, body {
     text-align: center;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 4vh;
     color: red;
 }
 
@@ -114,16 +114,16 @@ html, body {
 
 #text {
     font-family: 'Caesar Dressing';
-    font-size: 120px;
+    font-size: 12vh;
     color: white;
 }
 
 
 #click_me {
-    height: 100px;
-    width: 200px;
+    height: 10vh;
+    width: 20vh;
     font-family: 'Caesar Dressing';
-    font-size: 20px;
+    font-size: 2vh;
     color: white;
     background: none;
     border: black 1px solid;

@@ -3,7 +3,7 @@ var c = 3;
 function main() {
 
 //Controll---------------------------------------------------------------------------------------------->
-    const SNAKE_SPEED = 50
+    const SNAKE_SPEED = 5
 
     document.onkeydown = checkKey;
 
@@ -24,13 +24,10 @@ function main() {
                 {
                     var cur_top=parseFloat(snake.style.top);
                 }
-
-
-
-                snake.style.top = (cur_top-SNAKE_SPEED)+'px';
+                snake.style.top = (cur_top-SNAKE_SPEED)+'vh';
             }
 
-            if (snake.style.top == "0px") {
+            if (snake.style.top == "0vh") {
                 return
             }
             else {
@@ -50,9 +47,9 @@ function main() {
                 {
                     var cur_top=parseFloat(snake.style.top);
                 }
-                snake.style.top = (cur_top+SNAKE_SPEED)+'px';
+                snake.style.top = (cur_top+SNAKE_SPEED)+'vh';
             }
-            if (snake.style.top == "850px") {
+            if (snake.style.top == "85vh") {
                 return
             }
             else {
@@ -71,9 +68,9 @@ function main() {
                 {
                     var cur_left=parseFloat(snake.style.left);
                 }
-                snake.style.left = (cur_left-SNAKE_SPEED)+'px';
+                snake.style.left = (cur_left-SNAKE_SPEED)+'vh';
             }
-            if (snake.style.left == "0px") {
+            if (snake.style.left == "0vh") {
                 return
             }
             else {
@@ -93,9 +90,9 @@ function main() {
                 {
                     var cur_left=parseFloat(snake.style.left);
                 }
-                snake.style.left = (cur_left+SNAKE_SPEED)+'px';
+                snake.style.left = (cur_left+SNAKE_SPEED)+'vh';
             }
-            if (snake.style.left == "850px") {
+            if (snake.style.left == "85vh") {
                 return
             }
             else {
@@ -107,25 +104,25 @@ function main() {
     }
 
     //Create apple--------------------------------------------------------------------------------------->
-    document.getElementById('snake').style.left = 0 +'px';
-    document.getElementById('snake').style.top = 0 +'px';
+    document.getElementById('snake').style.left = 0 +'vh';
+    document.getElementById('snake').style.top = 0 +'vh';
 
     function createApple() {
-        var random_x = (Math.floor(Math.random() * 18)-1)*50;
-        var random_y = (Math.floor(Math.random() * 18))*50;
+        var random_x = (Math.floor(Math.random() * 18)-1)*5;
+        var random_y = (Math.floor(Math.random() * 18))*5;
         if (random_x != 0 && random_y != 0) {
-            document.getElementById('apple').style.left = random_x +'px';
-            document.getElementById('apple').style.top = random_y +'px';
+            document.getElementById('apple').style.left = random_x +'vh';
+            document.getElementById('apple').style.top = random_y +'vh';
         }
     }
     createApple();
 
     function createGreenApple() {
-        var random_x = (Math.floor(Math.random() * 18)-2)*50;
-        var random_y = (Math.floor(Math.random() * 18))*50;
+        var random_x = (Math.floor(Math.random() * 18)-2)*5;
+        var random_y = (Math.floor(Math.random() * 18))*5;
         if (random_x != 0 && random_y != 0) {
-            document.getElementById('gr_apple').style.left = random_x +'px';
-            document.getElementById('gr_apple').style.top = random_y +'px';
+            document.getElementById('gr_apple').style.left = random_x +'vh';
+            document.getElementById('gr_apple').style.top = random_y +'vh';
         }
     }
     createGreenApple();
@@ -163,15 +160,15 @@ function main() {
                 c += 1;
                 document.getElementById('score').innerHTML = c;
                 function makeApple() {
-                    var random_red_x = (Math.floor(Math.random() * 18)-1)*50;
-                    var random_red_y = (Math.floor(Math.random() * 18))*50;
+                    var random_red_x = (Math.floor(Math.random() * 18)-1)*5;
+                    var random_red_y = (Math.floor(Math.random() * 18))*5;
                     if (result3 == false) {
-                        document.getElementById('apple').style.left = random_red_x +'px';
-                        document.getElementById('apple').style.top = random_red_y +'px';
+                        document.getElementById('apple').style.left = random_red_x +'vh';
+                        document.getElementById('apple').style.top = random_red_y +'vh';
                     }
                     else {
-                        document.getElementById('apple').style.left = random_red_x - 50 + 'px';
-                        document.getElementById('apple').style.top = random_red_y +'px';
+                        document.getElementById('apple').style.left = random_red_x - 5 + 'vh';
+                        document.getElementById('apple').style.top = random_red_y +'vh';
                     }
                 }
                 makeApple();          
@@ -182,15 +179,15 @@ function main() {
                 c -= 1;
                 document.getElementById('score').innerHTML = c;
                 function makeGreenApple() {
-                    var random_green_x = (Math.floor(Math.random() * 18)-2)*50;
-                    var random_green_y = (Math.floor(Math.random() * 18))*50;
+                    var random_green_x = (Math.floor(Math.random() * 18)-2)*5;
+                    var random_green_y = (Math.floor(Math.random() * 18))*5;
                     if (result3 == false) {
-                        document.getElementById('gr_apple').style.left = random_green_x +'px';
-                        document.getElementById('gr_apple').style.top = random_green_y +'px';
+                        document.getElementById('gr_apple').style.left = random_green_x +'vh';
+                        document.getElementById('gr_apple').style.top = random_green_y +'vh';
                     }
                     else {
-                        document.getElementById('gr_apple').style.left = random_green_x - 50 +'px';
-                        document.getElementById('gr_apple').style.top = random_green_y +'px';
+                        document.getElementById('gr_apple').style.left = random_green_x - 5 +'vh';
+                        document.getElementById('gr_apple').style.top = random_green_y +'vh';
                     }
                 }
                 makeGreenApple();
