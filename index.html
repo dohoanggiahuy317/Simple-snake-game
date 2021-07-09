@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href='https://fonts.googleapis.com/css?family=Caesar Dressing' rel='stylesheet'>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div id="game_board">
+        <div id="snake" style="top: 0px; left: 0px"></div>
+        <div id="apple"></div>
+        <div class="green_apple" id="gr_apple"></div>        
+    </div>
+
+    <div id="score_board">
+        <div id="score">3</div>
+        <div id="heart"><i class="fas fa-heart"></i></div>
+    </div>
+
+    <div id="end_screen">
+        <p id="text">YOU LOSE. TRY AGAIN</p>
+        <button id="click_me">Start Game</button>
+    </div>
+    
+
+
+
+
+
+    <script src="index.js" defer type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+</body>
+</html>

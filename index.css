@@ -1,0 +1,136 @@
+html, body {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(224, 214, 187);
+}
+
+/* Game play----------------------------------------------------------------------------------------> */
+#game_board {
+    height: 900px;
+    width: 900px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    border: 1px black solid;
+    background-color: rgb(204, 228, 184);
+}
+
+#snake {
+    position: relative;
+    background-color: yellow;
+    width: 50px;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+}
+
+
+@keyframes appleBump {
+    0% {transform: scale(0.8);}
+    100% {transform: scale(1);}
+}
+
+#apple {
+    position: relative;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: black 1px solid;
+    animation: appleBump 0.4s linear infinite;
+}
+
+#gr_apple {
+    position: relative;
+    background-color: rgb(0, 255, 0);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: black 1px solid;
+    animation: appleBump 0.4s linear infinite;
+}
+
+/* score---------------------------------------------------------------------------------------> */
+
+#score_board {
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    top: 100px;
+    left: 100px;
+    margin: 0;
+    padding: 0;
+    border: black 1px solid;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(171, 226, 233);
+}
+
+#score {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-family: 'Caesar Dressing';
+}
+
+#heart {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: red;
+}
+
+/*end screen----------------------------------------------------------------------------------------*/
+
+#end_screen {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+    background-color: rgb(105, 105, 105);
+    opacity: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#text {
+    font-family: 'Caesar Dressing';
+    font-size: 120px;
+    color: white;
+}
+
+
+#click_me {
+    height: 100px;
+    width: 200px;
+    font-family: 'Caesar Dressing';
+    font-size: 20px;
+    color: white;
+    background: none;
+    border: black 1px solid;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#click_me:hover {
+    background: black;
+}
